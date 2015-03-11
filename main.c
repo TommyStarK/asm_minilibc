@@ -15,9 +15,11 @@ int	main()
   printf("ASM: %s\n" ,my_memset(r, 'Z', 5));
   printf("LIBC: %p\n", strchr(s, '8'));
   printf("ASM: %p\n", my_strchr(s, '8'));
-    printf("LIBC: %d\n", strlen(NULL));
+  printf("LIBC: %d\n", strlen(NULL));
   printf("ASM: %d\n", my_strlen(NULL));
   printf("ASM: %s\n" ,my_memset(r, 'Z', -5));
   printf("ASM: %p\n", my_strchr(NULL, '8'));
+
+  printf("ASM ===> STRNCMP : [%d]", my_strncmp(s, r));
   return (0);
 }
