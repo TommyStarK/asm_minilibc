@@ -20,13 +20,43 @@ find:
 
 	cmp r8b, r9b
 
-	je test
+	je test_match
 	inc rdi
 	jmp find
 
-test:
+test_match:
 	mov r10, rdi
 	mov r11, rsi
+	jmp test
+
+test:
 
 	mov r8b, [rdi]
+	mov r9b, [rsi]
+
+	cmp r8b, r9b
+	je success
+	jmp fail
+
+success:
+	inc rdi
+	inc rsi
+
+	mov r9b, [rsi]
+	cmp r9b, 0
+	je match
+	jmp test
+
+fail:
+	mov rdi, r10
+	mov rsi, r11
+	jmp find
+
+match:
+	mov rax, r10
 	jmp end
+end:
+	mov rsp, rbp
+	pop rbp
+
+	ret
