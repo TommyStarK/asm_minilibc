@@ -1,0 +1,32 @@
+[BITS 64]
+
+	global my_memcpy
+
+	section .text
+
+my_memcpy:
+
+	push rbp
+	mov rbp, rsp
+
+	mov rcx, 0
+	mov rax, rdi
+	
+loop:
+	cmp rdi, rsi
+	je end
+	cmp rcx, rdx
+	je end
+	mov r8b, [rsi]
+	mov [rdi], r8b
+	inc rdi
+	inc rsi
+	inc rcx
+	jmp loop
+	
+
+end:
+	mov rsp, rbp
+	pop rbp
+
+	ret
