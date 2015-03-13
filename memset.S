@@ -1,8 +1,6 @@
 [BITS 64]
-	;; symboles
 	global my_memset
 
-	;; code
 	section .text
 
 my_memset:
@@ -14,17 +12,14 @@ my_memset:
 	mov rbx, rdi
 	
 next:	cmp rcx, rdx
-	je end
+	jge end
 	mov [rbx], sil
-	;;mov [rbx], rsi
 	inc rcx
 	inc rbx
-	;; inc rbx
 	jmp next
 
 end:	mov rax, rdi
 
-	;; Epilogue
 	mov rsp, rbp
 	pop rbp
 

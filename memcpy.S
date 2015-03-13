@@ -16,7 +16,7 @@ loop:
 	cmp rdi, rsi
 	je end
 	cmp rcx, rdx
-	je end
+	jge end
 	mov r8b, [rsi]
 	mov [rdi], r8b
 	inc rdi
