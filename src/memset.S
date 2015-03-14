@@ -1,9 +1,9 @@
 [BITS 64]
-	global my_memset
+	global memset
 
 	section .text
 
-my_memset:
+memset:
 	push rbp
 	mov rbp, rsp
 

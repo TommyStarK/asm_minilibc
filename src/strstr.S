@@ -1,10 +1,10 @@
 [BITS 64]
 
-	global my_strstr
+	global strstr
 
 	section .text
 
-my_strstr:
+strstr:
 
 	push rbp
 	mov rbp, rsp

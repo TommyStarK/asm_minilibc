@@ -1,10 +1,10 @@
 [BITS 64]
 
-	global my_strcspn
+	global strcspn
 
 	section .text
 
-my_strcspn:
+strcspn:
 
 	push rbp
 	mov rbp, rsp

@@ -1,8 +1,8 @@
 [BITS 64]
 
-	global my_strcasecmp
+	global strcasecmp
 
-my_strcasecmp:
+strcasecmp:
 	
 	push rbp
 	mov rbp, rsp

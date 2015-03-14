@@ -1,10 +1,10 @@
 [BITS 64]
 
-	global my_memcpy
+	global memcpy
 
 	section .text
 
-my_memcpy:
+memcpy:
 
 	push rbp
 	mov rbp, rsp

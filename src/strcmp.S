@@ -1,9 +1,9 @@
 [BITS 64]
 
-	global my_strcmp
+	global strcmp
 	section .text
 
-my_strcmp:
+strcmp:
 
 	push rbp
 	mov rbp, rsp

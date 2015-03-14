@@ -1,12 +1,10 @@
 [BITS 64]
 
-	;; déclaration des symboles
-	global my_strchr
+	global strchr
 
-	;; code
 	section .text
 
-my_strchr:
+trchr:
 
 	push rbp
 	mov rbp, rsp

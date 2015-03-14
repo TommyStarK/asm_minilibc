@@ -1,16 +1,16 @@
 [BITS 64]
 
-	global my_rindex
-	extern my_strlen
+	global rindex
+	extern strlen
 	section .text
 
-my_rindex:
+rindex:
 
 	push rbp
 	mov rbp, rsp
 
 	push rdi
-	call my_strlen
+	call strlen wrt ..plt
 	pop rdi
 	mov r8, rdi
 	add rdi, rax
