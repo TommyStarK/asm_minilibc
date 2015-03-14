@@ -7,19 +7,21 @@ memset:
 	push rbp
 	mov rbp, rsp
 
-	mov rax, 0
+	mov rax, rdi
+	mov r8, rdi
 	mov rcx, 0
-	mov rbx, rdi
 	
-next:	cmp rcx, rdx
+next:
+	cmp r8b, 0
+	je end
+	cmp rcx, rdx
 	jge end
-	mov [rbx], sil
+	mov r8b, sil
 	inc rcx
-	inc rbx
+	inc r8
 	jmp next
 
-end:	mov rax, rdi
-
+end:
 	mov rsp, rbp
 	pop rbp
 

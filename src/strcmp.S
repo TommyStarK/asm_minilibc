@@ -10,13 +10,17 @@ strcmp:
 	mov rax, 0
 	
 cmp:
-	cmp rdi, rsi
+	mov r10b, byte[rdi]
+	mov r11b, byte[rsi]
+	cmp r10b, 0
+	je mismatch
+	cmp r11b, 0
+	je mismatch
+	cmp r10b, r11b
 	je match
 	jmp mismatch
 	
 match:
-	cmp byte[rdi], 0
-	je end
 	inc rdi
 	inc rsi
 	jmp cmp
