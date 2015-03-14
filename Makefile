@@ -5,7 +5,7 @@
 ## Login   <loxmi@epitech.net>
 ## 
 ## Started on  Sat Mar 14 02:39:04 2015 THOMAS MILOX
-## Last update Sat Mar 14 03:05:50 2015 THOMAS MILOX
+## Last update Sat Mar 14 03:16:26 2015 THOMAS MILOX
 ##
 
 
@@ -22,13 +22,13 @@ SRC_DIR		=	src
 SRC 		=	$(SRC_DIR)/rindex.S	\
 			$(SRC_DIR)/strlen.S	\
 			$(SRC_DIR)/strchr.S	\
-			$(SRC_DIR)/strcmp.S	\
 			$(SRC_DIR)/strpbrk.S	\
 			$(SRC_DIR)/strcspn.S	\
 			$(SRC_DIR)/memcpy.S	\
 			$(SRC_DIR)/strncmp.S	\
 			$(SRC_DIR)/strcasecmp.S	\
-			$(SRC_DIR)/memset.S
+			# $(SRC_DIR)/memset.S	\
+			# $(SRC_DIR)/strcmp.S	\
 
 OBJ		=	$(SRC:.S=.o)
 
