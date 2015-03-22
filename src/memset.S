@@ -1,6 +1,6 @@
 [BITS 64]
-	global memset
 
+	global memset
 	section .text
 
 memset:
@@ -8,18 +8,14 @@ memset:
 	mov rbp, rsp
 
 	mov rax, rdi
-	mov r8, rdi
-	mov rcx, 0
 	
-next:
-	cmp r8b, 0
-	je end
-	cmp rcx, rdx
-	jge end
-	mov r8b, sil
-	inc rcx
-	inc r8
-	jmp next
+loop:
+	cmp rdx, 0	
+	jle end
+	mov byte[rdi], sil
+	dec rdx		
+	inc rdi
+	jmp loop
 
 end:
 	mov rsp, rbp
