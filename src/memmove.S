@@ -1,8 +1,8 @@
 [BITS 64]
-	global my_memmove:function
+	global memove
 	section .text
 
-my_memmove:
+memove:
 	push rbp
 	mov rbp, rsp
 

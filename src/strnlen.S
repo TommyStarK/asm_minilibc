@@ -1,27 +1,32 @@
 [BITS 64]
 
-	global strchr
+	global strnlen
 
 	section .text
 
-strchr:
+strnlen:
 
 	push rbp
 	mov rbp, rsp
 
-	mov rax, 0
 	
+	mov rcx, 0
+
 loop:
-	cmp [rdi], sil
-	je found
 	cmp byte[rdi], 0
 	je end
+	cmp rsi, 0
+	jle end
+	
+	inc rcx
 	inc rdi
+	dec rsi
 	jmp loop
-found:	
-	mov rax, rdi 
+	
 
 end:
+	mov rax, rcx
+
 	mov rsp, rbp
 	pop rbp
 

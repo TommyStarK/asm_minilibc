@@ -5,7 +5,7 @@
 ## Login   <loxmi@epitech.net>
 ## 
 ## Started on  Sat Mar 14 02:39:04 2015 THOMAS MILOX
-## Last update Sun Mar 22 01:44:59 2015 Johan Paasche
+## Last update Sun Mar 22 03:41:14 2015 Johan Paasche
 ##
 
 
@@ -28,8 +28,13 @@ SRC 		=	$(SRC_DIR)/rindex.S	\
 			$(SRC_DIR)/memcpy.S	\
 			$(SRC_DIR)/strcmp.S	\
 			$(SRC_DIR)/strncmp.S	\
+			$(SRC_DIR)/memset.S	\
 			$(SRC_DIR)/memmove.S	\
-			$(SRC_DIR)/memset.S	
+			$(SRC_DIR)/strrchr.S	\
+			$(SRC_DIR)/strchrnul.S	\
+			$(SRC_DIR)/strspn.S	\
+			$(SRC_DIR)/strnlen.S	\
+
 
 OBJ		=	$(SRC:.S=.o)
 
@@ -58,3 +63,5 @@ fclean		:	clean
 			rm -f $(TEST_NAME)
 
 re		:	fclean ${NAME}
+
+.PHONY		:	all clean fclean re

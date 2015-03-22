@@ -1,10 +1,10 @@
 [BITS 64]
 
-	global strchr
+	global strrchr
 
 	section .text
 
-strchr:
+strrchr:
 
 	push rbp
 	mov rbp, rsp
@@ -13,13 +13,18 @@ strchr:
 	
 loop:
 	cmp [rdi], sil
-	je found
+	je assign
 	cmp byte[rdi], 0
 	je end
 	inc rdi
 	jmp loop
-found:	
-	mov rax, rdi 
+
+assign:
+	mov rax, rdi
+	cmp byte[rdi], 0
+	je end
+	inc rdi
+	jmp loop
 
 end:
 	mov rsp, rbp
