@@ -5,7 +5,7 @@
 ## Login   <loxmi@epitech.net>
 ## 
 ## Started on  Sat Mar 14 02:39:04 2015 THOMAS MILOX
-## Last update Sun Mar 22 03:41:14 2015 Johan Paasche
+## Last update Sun Mar 22 18:45:10 2015 Johan Paasche
 ##
 
 
@@ -21,6 +21,7 @@ SRC_DIR		=	src
 
 SRC 		=	$(SRC_DIR)/rindex.S	\
 			$(SRC_DIR)/strlen.S	\
+			$(SRC_DIR)/strstr.S	\
 			$(SRC_DIR)/strchr.S	\
 			$(SRC_DIR)/strpbrk.S	\
 			$(SRC_DIR)/strcspn.S	\
